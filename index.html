@@ -375,6 +375,84 @@
             gap: 10px;
         }
         
+        /* Trust Badge Styles */
+        .trust-badge {
+            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+            border: 2px solid #4caf50;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .trust-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #4caf50, #8bc34a);
+        }
+        
+        .trust-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #2e7d32;
+        }
+        
+        .trust-header i {
+            font-size: 1.8rem;
+            color: #4caf50;
+            animation: pulse-shield 2s infinite;
+        }
+        
+        .trust-text {
+            color: #558b2f;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .virustotal-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+        
+        .virustotal-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+            background: linear-gradient(135deg, #45a049 0%, #3d8b40 100%);
+        }
+        
+        .virustotal-link i {
+            font-size: 0.9rem;
+        }
+        
+        @keyframes pulse-shield {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+        
         /* FAQ Section */
         .faq {
             padding: 100px 0;
@@ -715,6 +793,19 @@
                 </div>
                 <h2>تحميل CapCutExporter</h2>
                 <p>انقر على الزر أدناه لتحميل البرنامج مباشرة</p>
+                
+                <!-- VirusTotal Trust Badge -->
+                <div class="trust-badge">
+                    <div class="trust-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>تم التحقق من الأمان</span>
+                    </div>
+                    <p class="trust-text">تم فحص البرنامج على VirusTotal للتأكد من سلامته</p>
+                    <a href="https://www.virustotal.com/gui/" target="_blank" class="virustotal-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        فحص البرنامج على VirusTotal
+                    </a>
+                </div>
                 
                 <div class="security-notice">
                     <h4><i class="fas fa-exclamation-triangle"></i> ملاحظة هامة حول الأمان</h4>
